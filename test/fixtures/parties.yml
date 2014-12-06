@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partyId: 1
+  date: 2014-12-01 12:23:36
+  limit: 1
+  host: MyString
+  hostEmail: MyString
+
+two:
+  partyId: 1
+  date: 2014-12-01 12:23:36
+  limit: 1
+  host: MyString
+  hostEmail: MyString

@@ -1,0 +1,40 @@
+<%= form_for @party do |f| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@party.errors.count, "error") %> prevented your changes from being saved:</h2>
+      <ul>
+        <% @party.errors.full_messages.each do |msg| %>
+  	      <li><%= msg %></li>
+  	    <% end %>
+  	  </ul>
+    </div>
+  <% end %>
+  <p>
+  	<%= f.label :host %><br />
+  	<%= f.text_field :host %>
+  </p>
+  <p>
+  	<%= f.label :hostEmail, "Host Email" %><br />
+  	<%= f.text_field :hostEmail %>
+  </p>
+  <p>
+  	<%= f.label :date %><br />
+  	<%= f.text_field :date %>
+  </p>
+  <p>
+  	<%= f.label :limit %><br />
+  	<%= f.text_field :limit %>
+  </p>
+  <p>
+    <%= f.label :guests %>
+    <div class="guest_list">
+      <div class="guest_row">
+        <input type="text" /> <button type="button" onClick="AddRow()" class="add_row">+</button> <button type="button" onClick="RemoveRow()" class="no_row">-</button>
+      </div>
+    </div>
+  </p>
+  <p>
+  	<%= f.submit commit="Save" %>
+  </p>
+
+<% end %>

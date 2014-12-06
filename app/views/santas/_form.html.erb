@@ -1,0 +1,44 @@
+<%= form_for @santa do |f| %>
+  <% if @santa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@santa.errors.count, "error") %> prevented your changes from being saved:</h2>
+      <ul>
+        <% @santa.errors.full_messages.each do |msg| %>
+  	      <li><%= msg %></li>
+  	    <% end %>
+  	  </ul>
+    </div>
+  <% end %>
+  <p>
+  	<%= f.label :name %><br />
+  	<%= f.text_field :name %>
+  </p>
+  <p>
+  	<%= f.label :email %><br />
+  	<%= f.text_field :email %>
+  </p>
+  <p>
+  	<%= f.label :fact1 %><br />
+  	<%= f.text_field :fact1 %>
+  </p>
+  <p>
+  	<%= f.label :fact2 %><br />
+  	<%= f.text_field :fact2 %>
+  </p>
+  <p>
+  	<%= f.label :fact3 %><br />
+  	<%= f.text_field :fact3 %>
+  </p>
+  <p>
+  	<%= f.label :fact4 %><br />
+  	<%= f.text_field :fact4 %>
+  </p>
+  <p>
+  	<%= f.label :fact5 %><br />
+  	<%= f.text_field :fact5 %>
+  </p>
+  <p>
+  	<%= f.submit commit="Save" %>
+  </p>
+
+<% end %>
